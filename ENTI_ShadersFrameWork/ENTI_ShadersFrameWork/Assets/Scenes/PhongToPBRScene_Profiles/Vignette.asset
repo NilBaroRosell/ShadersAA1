@@ -51,8 +51,103 @@ MonoBehaviour:
   m_Name: Vignette
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 2154727686811146258}
+  - {fileID: 2181096269854209481}
+--- !u!114 &546142208457124059
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VignetteSettings
+  m_EditorClassIdentifier: Assembly-CSharp::VignetteSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  VignetteSize:
+    overrideState: 0
+    value: 3
 --- !u!114 &2154727686811146258
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VignetteSettings
+  m_EditorClassIdentifier: Assembly-CSharp::VignetteSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  VignetteSize:
+    overrideState: 0
+    value: 3
+--- !u!114 &2181096269854209481
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2abe27e4896414489c4a8a1d6f1c6c, type: 3}
+  m_Name: Vignette
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  VignetteSize:
+    overrideState: 0
+    value: 3
+--- !u!114 &3045804049556529372
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VignetteSettings
+  m_EditorClassIdentifier: Assembly-CSharp::VignetteSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  VignetteSize:
+    overrideState: 0
+    value: 3
+--- !u!114 &4045375056228087985
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: VignetteSettings
+  m_EditorClassIdentifier: Assembly-CSharp::VignetteSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  VignetteSize:
+    overrideState: 0
+    value: 3
+--- !u!114 &8807854972076559791
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}

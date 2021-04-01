@@ -1,6 +1,72 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8728629658426980037
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: PixelateSettings
+  m_EditorClassIdentifier: Assembly-CSharp::PixelateSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  XResolution:
+    overrideState: 0
+    value: 320
+  YResolution:
+    overrideState: 0
+    value: 180
+--- !u!114 &-5590674801413751202
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: PixelateSettings
+  m_EditorClassIdentifier: Assembly-CSharp::PixelateSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  XResolution:
+    overrideState: 1
+    value: 320
+  YResolution:
+    overrideState: 1
+    value: 180
 --- !u!114 &-4538057522410695454
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: PixelateSettings
+  m_EditorClassIdentifier: Assembly-CSharp::PixelateSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  XResolution:
+    overrideState: 0
+    value: 320
+  YResolution:
+    overrideState: 0
+    value: 180
+--- !u!114 &-767581539989604746
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35,7 +101,7 @@ MonoBehaviour:
   m_Name: Pixelate
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 1453463498414346578}
+  - {fileID: 2480460356078989749}
 --- !u!114 &1453463498414346578
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -58,7 +124,139 @@ MonoBehaviour:
   YResolution:
     overrideState: 0
     value: 180
+--- !u!114 &2327045661088423643
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: PixelateSettings
+  m_EditorClassIdentifier: Assembly-CSharp::PixelateSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  XResolution:
+    overrideState: 0
+    value: 320
+  YResolution:
+    overrideState: 0
+    value: 180
+--- !u!114 &2480460356078989749
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31de6c7c3fe563e40ba2cb051d9e52ae, type: 3}
+  m_Name: Pixelate
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  XResolution:
+    overrideState: 0
+    value: 320
+  YResolution:
+    overrideState: 0
+    value: 180
+--- !u!114 &2576280476584878938
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: PixelateSettings
+  m_EditorClassIdentifier: Assembly-CSharp::PixelateSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  XResolution:
+    overrideState: 1
+    value: 320
+  YResolution:
+    overrideState: 1
+    value: 180
 --- !u!114 &5772097703525497470
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: PixelateSettings
+  m_EditorClassIdentifier: Assembly-CSharp::PixelateSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  XResolution:
+    overrideState: 0
+    value: 320
+  YResolution:
+    overrideState: 0
+    value: 180
+--- !u!114 &6727337731522491321
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: PixelateSettings
+  m_EditorClassIdentifier: Assembly-CSharp::PixelateSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  XResolution:
+    overrideState: 0
+    value: 320
+  YResolution:
+    overrideState: 0
+    value: 180
+--- !u!114 &6974041490240211396
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: PixelateSettings
+  m_EditorClassIdentifier: Assembly-CSharp::PixelateSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  XResolution:
+    overrideState: 0
+    value: 320
+  YResolution:
+    overrideState: 0
+    value: 180
+--- !u!114 &7719841761820541984
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}

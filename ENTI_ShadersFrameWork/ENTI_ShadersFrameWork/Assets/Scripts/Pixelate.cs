@@ -4,23 +4,20 @@ using UnityEngine;
 using System;
 using UnityEngine.Rendering.PostProcessing;
 
-//Needed to let unity serialize this and extend PostProcessEffectSettings
 [Serializable]
-//Using [PostProcess()] attrib allows us to tell Unity that the class holds postproccessing data. 
-[PostProcess(renderer: typeof(Pixelate),//First parameter links settings with actual renderer
-    PostProcessEvent.AfterStack,//Tells Unity when to execute this postpro in the stack
-    "Custom/Pixelate")] //Creates a menu entry for the effect
-                       //Forth parameter that allows to decide if the effect should be shown in scene view
-public sealed class PixelateSettings : PostProcessEffectSettings
+
+[PostProcess(renderer: typeof(PixelateRender),
+    PostProcessEvent.AfterStack,
+    "Custom/Pixelate")] 
+public sealed class Pixelate : PostProcessEffectSettings
 {
     [Range(0f, 1920f), Tooltip("X Resolution.")]
-    public FloatParameter XResolution = new FloatParameter { value = 320.0f }; //Custom parameter class, full list at: /PostProcessing/Runtime/
+    public FloatParameter XResolution = new FloatParameter { value = 320.0f };
     [Range(0f, 1080f), Tooltip("Y Resolution.")]
-    public FloatParameter YResolution = new FloatParameter { value = 180.0f }; //Custom parameter class, full list at: /PostProcessing/Runtime/
-                                                                               //The default value is important, since is the one that will be used for blending if only 1 of volume has this effect
+    public FloatParameter YResolution = new FloatParameter { value = 180.0f };
 }
 
-public class Pixelate : PostProcessEffectRenderer<PixelateSettings>//<T> is the setting type
+public class PixelateRender : PostProcessEffectRenderer<Pixelate>//<T> is the setting type
 {
     public override void Render(PostProcessRenderContext context)
     {

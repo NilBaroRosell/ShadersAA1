@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8337250004275320845
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c557e31e8b94ccc409013dab8c687b98, type: 3}
+  m_Name: GammaCorrection
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  linearToGamma:
+    overrideState: 0
+    value: 1
 --- !u!114 &-7929832287519702464
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -19,7 +38,45 @@ MonoBehaviour:
   linearToGamma:
     overrideState: 0
     value: 1
+--- !u!114 &-6319104239144918384
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GammaCorrectionSettings
+  m_EditorClassIdentifier: Assembly-CSharp::GammaCorrectionSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  linearToGamma:
+    overrideState: 0
+    value: 1
 --- !u!114 &-5919608194008994746
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GammaCorrectionSettings
+  m_EditorClassIdentifier: Assembly-CSharp::GammaCorrectionSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  linearToGamma:
+    overrideState: 1
+    value: 1
+--- !u!114 &-4687580535042130766
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,4 +127,61 @@ MonoBehaviour:
   m_Name: GammaCorrection
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: -7929832287519702464}
+  - {fileID: -8337250004275320845}
+--- !u!114 &6154427161752987592
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GammaCorrectionSettings
+  m_EditorClassIdentifier: Assembly-CSharp::GammaCorrectionSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  linearToGamma:
+    overrideState: 0
+    value: 1
+--- !u!114 &7434547213052144340
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GammaCorrectionSettings
+  m_EditorClassIdentifier: Assembly-CSharp::GammaCorrectionSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  linearToGamma:
+    overrideState: 0
+    value: 1
+--- !u!114 &7588708246950733246
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: GammaCorrectionSettings
+  m_EditorClassIdentifier: Assembly-CSharp::GammaCorrectionSettings
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  linearToGamma:
+    overrideState: 0
+    value: 1

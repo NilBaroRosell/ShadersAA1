@@ -16,7 +16,6 @@
         float vignette = 1.0 - pow(dot(uv, uv), 1);
         vignette = pow(vignette, _vignetteSize);
         col *= vignette;
-
         // Return the result
         return col;
     }
