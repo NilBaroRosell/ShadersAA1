@@ -96,10 +96,13 @@
                 // we calculate the ambient 
                 fixed4 ambientComp = ambientLightCol * _ambientIntensity;
 
+                float3 camPos = _WorldSpaceCameraPos;
+                float3 objectPos = float3(1,1,1);
+                float3 view = camPos - objectPos;
+
                 //DiffusseComponent
                 fixed4 lightColor = fixed4(1, 1, 1, 1);
-                float3 lightDirection = float3 (-0.25, 1, -0.5);
-                float3 view = UNITY_MATRIX_IT_MV[1].xyz;
+                float3 lightDirection = float3 (-0.5, 1,-0.5);
 
                 fixed4 diffuseComp = lightColor * _diffuseIntensity * dot(lightDirection, i.worldNormal);
 

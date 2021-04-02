@@ -23,8 +23,8 @@ Material:
     - _ambientIntensity: 1
     - _b: 0.084
     - _diffuseIntensity: 1
-    - _fresnelParam: 0.079
+    - _fresnelParam: 1
     - _g: 0.332
     - _r: 0.803
-    - _roughness: 0.873
+    - _roughness: 0.75
     m_Colors: []
