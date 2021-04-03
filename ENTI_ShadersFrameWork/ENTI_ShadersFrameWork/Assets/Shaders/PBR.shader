@@ -1,5 +1,7 @@
 ﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
+// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
 Shader "Unlit/PBR"
 {
     Properties
@@ -82,7 +84,7 @@ Shader "Unlit/PBR"
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 //o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
-                worldPos = mul((float4x4)unity_ObjectToWorld, v.vertex);
+                worldPos = mul(unity_ObjectToWorld, v.vertex);
                 return o;
             }
 
@@ -107,7 +109,7 @@ Shader "Unlit/PBR"
                 fixed4 ambientComp = ambientLightCol * _ambientIntensity;
 
                 float3 camPos = _WorldSpaceCameraPos;
-                float3 view = float3 (camPos.x - worldPos.x, camPos.y - worldPos.y, camPos.z - worldPos.z);
+                float3 view = normalize(_WorldSpaceCameraPos.xyz - worldPos.xyz);
 
                 //DiffusseComponent
                 fixed4 lightColor = fixed4(1, 1, 1, 1);
