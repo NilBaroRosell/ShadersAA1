@@ -1,4 +1,6 @@
-﻿Shader "Unlit/PBR"
+﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
+
+Shader "Unlit/PBR"
 {
     Properties
     {
@@ -9,6 +11,9 @@
         _r("R", Range(0,1)) = 1
         _g("G", Range(0,1)) = 0
         _b("B", Range(0,1)) = 0
+        _x("Light Direction X", Range(-1,1)) = -0.5
+        _y("Light Direction Y", Range(-1,1)) = 1
+        _z("Light Direction Z", Range(-1,1)) = -0.5
     }
         SubShader
     {
@@ -37,6 +42,7 @@
             };
 
             float _fresnelParam;
+            float3 worldPos;
 
             float3 halfVector(float3 v, float3 v2)
             {
@@ -76,6 +82,7 @@
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 //o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
+                worldPos = mul((float4x4)unity_ObjectToWorld, v.vertex);
                 return o;
             }
 
@@ -85,6 +92,9 @@
             float _r;
             float _g;
             float _b;
+            float _x;
+            float _y;
+            float _z;
 
             fixed4 frag(v2f i) : SV_Target
             {
@@ -97,12 +107,11 @@
                 fixed4 ambientComp = ambientLightCol * _ambientIntensity;
 
                 float3 camPos = _WorldSpaceCameraPos;
-                float3 objectPos = float3(1,1,1);
-                float3 view = camPos - objectPos;
+                float3 view = float3 (camPos.x - worldPos.x, camPos.y - worldPos.y, camPos.z - worldPos.z);
 
                 //DiffusseComponent
                 fixed4 lightColor = fixed4(1, 1, 1, 1);
-                float3 lightDirection = float3 (-0.5, 1,-0.5);
+                float3 lightDirection = float3 (_x, _y, _z);
 
                 fixed4 diffuseComp = lightColor * _diffuseIntensity * dot(lightDirection, i.worldNormal);
 

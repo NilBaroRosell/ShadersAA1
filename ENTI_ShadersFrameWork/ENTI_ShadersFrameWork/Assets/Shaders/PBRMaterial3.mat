@@ -27,4 +27,7 @@ Material:
     - _g: 0.332
     - _r: 0.803
     - _roughness: 0.75
+    - _x: 0.5
+    - _y: 1
+    - _z: 0.5
     m_Colors: []
