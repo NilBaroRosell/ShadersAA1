@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - _ambientIntensity: 1
+    - _ambientIntensity: 0.5
     - _aux: 1
     - _b: 0.803
     - _diffuseIntensity: 1
@@ -28,6 +28,7 @@ Material:
     - _g: 0.127
     - _r: 0.134
     - _roughness: 0.069
+    - _specularIntensity: 1
     - _x: -0.5
     - _y: 1
     - _z: -0.5

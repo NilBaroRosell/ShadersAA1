@@ -8,6 +8,7 @@ Shader "Unlit/PBR"
     {
         _ambientIntensity("Ambient Light Intensity", Range(0,1)) = 0.25
         _diffuseIntensity("Diffuse Light Intensity", Range(0,1)) = 0.5
+        _specularIntensity("Specular Light Intensity", Range(0,1)) = 0.5
         _roughness("Roughness", Range(0,1)) = 1
         _fresnelParam("Fresnel parameter", Range(0,1)) = 1
         _r("R", Range(0,1)) = 1
@@ -41,10 +42,10 @@ Shader "Unlit/PBR"
                 float2 uv : TEXCOORD0;
                 float4 vertex : SV_POSITION;
                 float3 worldNormal: TEXCOORD1;
+                float3 view: TEXCOORD2;
             };
 
             float _fresnelParam;
-            float3 worldPos;
 
             float3 halfVector(float3 v, float3 v2)
             {
@@ -84,12 +85,13 @@ Shader "Unlit/PBR"
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 //o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
-                worldPos = mul(unity_ObjectToWorld, v.vertex);
+                o.view = normalize(WorldSpaceViewDir(v.vertex));
                 return o;
             }
 
             float _ambientIntensity; // how strong is it?
             float _diffuseIntensity; // how strong is it?
+            float _specularIntensity; // how strong is it?
             float _roughness;
             float _r;
             float _g;
@@ -108,16 +110,13 @@ Shader "Unlit/PBR"
                 // we calculate the ambient 
                 fixed4 ambientComp = ambientLightCol * _ambientIntensity;
 
-                float3 camPos = _WorldSpaceCameraPos;
-                float3 view = normalize(_WorldSpaceCameraPos.xyz - worldPos.xyz);
-
                 //DiffusseComponent
                 fixed4 lightColor = fixed4(1, 1, 1, 1);
                 float3 lightDirection = float3 (_x, _y, _z);
 
                 fixed4 diffuseComp = lightColor * _diffuseIntensity * dot(lightDirection, i.worldNormal);
 
-                fixed4 specularComp = lightColor * BRDF(lightDirection, i.worldNormal, halfVector(lightDirection, view), view, _roughness);
+                fixed4 specularComp = lightColor * _specularIntensity * BRDF(lightDirection, i.worldNormal, halfVector(lightDirection, i.view), i.view, _roughness);
 
                 return colorObject * (ambientComp + diffuseComp + specularComp);
             }
