@@ -11,9 +11,9 @@ Shader "Unlit/PBR"
         _specularIntensity("Specular Light Intensity", Range(0,1)) = 0.5
         _roughness("Roughness", Range(0,1)) = 1
         _fresnelParam("Fresnel parameter", Range(0,1)) = 1
-        _r("R", Range(0,1)) = 1
-        _g("G", Range(0,1)) = 0
-        _b("B", Range(0,1)) = 0
+        _r("Object R Component", Range(0,1)) = 1
+        _g("Object G Component", Range(0,1)) = 0
+        _b("Object B Component", Range(0,1)) = 0
         _x("Light Direction X", Range(-1,1)) = -0.5
         _y("Light Direction Y", Range(-1,1)) = 1
         _z("Light Direction Z", Range(-1,1)) = -0.5
@@ -65,7 +65,7 @@ Shader "Unlit/PBR"
                 return pow((_fresnelParam + (1.0 - _fresnelParam) * (1.0 - dot(h, l))), 5.0);
             }
 
-            float Geometry(fixed3 l, fixed3 n, fixed3 h, fixed3 v)
+            float Geometry(float3 l, float3 n, float3 h, float3 v)
             {
                 float dotNL = dot(n, l);
                 float dotNV = dot(n, v);
